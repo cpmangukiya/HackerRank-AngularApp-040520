@@ -100,7 +100,7 @@ describe('Unit Test', function() {
     const bankhost = 'models';
     const bankBasePath = '/united-federation-bank';
     const transactionsApiPath = '/transactions/';
-    const transactionId = 'ufbAccount.json';
+    const transactionId = 'ufbTransactions.json';
     const mockRes_GetTransactionsbyId = [
       {
         "date": "2018-11-21",
@@ -117,7 +117,7 @@ describe('Unit Test', function() {
         "bank": "United Federation Bank"
       }
     ];
-    $httpBackend.whenGET('models/united-federation-bank/transactions/ufbAccount.json').respond(mockRes_GetTransactionsbyId);
+    $httpBackend.whenGET('models/united-federation-bank/transactions/ufbTransactions.json').respond(mockRes_GetTransactionsbyId);
     apiFac.getTransactionsById(bankhost, bankBasePath, transactionsApiPath, transactionId).then(function(response) {
       expect(this.transactionResponse).toBe(response);
     })

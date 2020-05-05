@@ -18,7 +18,7 @@
 <body>
 
 <div ng-app="myApp">
-  <div ng-controller="MainController">
+  <div ng-controller="MainController" ng-init="callOnLoad()">
    <div id="mySidebar" class="sidebar">
         <a id="close-nav" href="javascript:void(0)" class="closebtn" ng-click="closeNav()">×</a>
         <a id="transaction-click" ng-click="transactionclick()">Transactions</a>
